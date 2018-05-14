@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <sagsaguz.portfolio.utils.Circle
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/defaultCircle"/>
+
+    <sagsaguz.portfolio.utils.Circle
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/statisticsCircle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kotlin"
+        android:textSize="14sp"
+        android:layout_below="@id/statisticsCircle"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/languageName"/>
+
+</RelativeLayout>

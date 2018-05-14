@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="sagsaguz.portfolio.fragment.ExperienceFragment"
+    tools:showIn="@layout/main_page_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_add"
+            android:tint="?android:attr/textColorSecondary"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:visibility="invisible"
+            android:id="@+id/ivCompany"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="@dimen/left_offset"
+            android:id="@+id/companies">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tvCompany1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tvCompany2"/>
+
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginStart="@dimen/recycler_view_left_offset"
+            android:layout_below="@id/companies"
+            android:clipChildren="false"
+            android:overScrollMode="never"
+            android:id="@+id/rvExperience"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rvExperience"
+            android:layout_alignParentBottom="true"
+            android:animateLayoutChanges="true">
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class = "com.google.android.gms.maps.SupportMapFragment"/>
+
+            <View
+                android:id="@+id/gtop"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@drawable/map_bg"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/gradient_map"
+                android:layout_below="@+id/gtop"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvExperience"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/access_time"
+                android:tint="?android:attr/textColorSecondary"
+                android:scaleType="fitCenter"
+                android:id="@+id/ivDuration"/>
+
+            <TextSwitcher
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/left_offset"
+                android:id="@+id/tsDuration"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

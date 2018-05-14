@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+
+    <string name="login_message">Welcome Sagar</string>
+
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+
+    <string name="google_maps_key">AIzaSyB9sVEwM3ZNmgrAB3UG_DjiQ0EjoPi5Y4Q</string>
+</resources>
